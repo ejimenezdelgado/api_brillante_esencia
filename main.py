@@ -21,5 +21,11 @@ api.add_resource(FacturasResource, '/facturas', '/facturas/<int:factura_id>')
 api.add_resource(InventarioResource, '/inventario',
                  '/inventario/<int:inventario_id>')
 
+# Ruta de inicio (home)
+@app.route('/')
+def home():
+  return "El mejor api de la historia por CHATGPT"
+
+
 if __name__ == '__main__':
-  app.run(debug=True)
+  app.run(host='0.0.0.0')
